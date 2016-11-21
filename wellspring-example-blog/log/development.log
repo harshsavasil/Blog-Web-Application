@@ -1,0 +1,20 @@
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-21 21:48:25 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (26.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mWellspring::Entry Load (86.5ms)[0m  SELECT "wellspring_entries".* FROM "wellspring_entries" WHERE "wellspring_entries"."type" IN ('BlogPost', 'BlogLink') AND (published_at <= '2016-11-21 16:18:26.381462')  ORDER BY id desc
+  Rendered blog_posts/_blog_post.html.erb (3.3ms)
+  Rendered blog_posts/_blog_post.html.erb (0.6ms)
+  Rendered posts/index.html.erb within layouts/application (316.6ms)
+  [1m[36mUser Load (28.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mSQL (19.9ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2016-11-17 06:27:57.821968"], ["current_sign_in_at", "2016-11-21 16:18:27.894373"], ["sign_in_count", 4], ["updated_at", "2016-11-21 16:18:27.899296"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  COMMIT
+Completed 200 OK in 1663ms (Views: 1264.5ms | ActiveRecord: 273.3ms)
+
+
+Started GET "/assets/shared.self-00818ace8ab937382fd0c91995e2c1d79a0a1e1e6033042179ec96c0a0f819ee.css?body=1" for 127.0.0.1 at 2016-11-21 21:48:28 +0530
+
+
+Started GET "/assets/scaffolds.self-8a710523f63ea7a3636b4b516a1f4c9a0784a6ac061459facb4bf7d8aa74e069.css?body=1" for 127.0.0.1 at 2016-11-21 21:48:28 +0530
